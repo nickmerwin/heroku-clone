@@ -7,8 +7,10 @@ class Heroku::Command::App
     new_app = args.shift
     puts "Cloning #{old_app}"
 
+    old_stack = heroku.info(old_app)[:stack]
+
     step "creating application"
-    new_app = heroku.create(new_app)
+    new_app = heroku.create(new_app, :stack => old_stack)
     step "new app: #{new_app}", 2
 
     step "cloning addons"
