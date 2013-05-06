@@ -9,7 +9,7 @@ Will clone a Heroku app to a new app. Will clone the following:
 
 ## Installation
 
-    $ heroku plugins:install git://github.com/ddollar/heroku-clone.git
+    $ heroku plugins:install git://github.com/nickmerwin/heroku-clone.git
 
 ## Usage
 
