@@ -3,7 +3,7 @@ module Heroku::Command
   class Clone < BaseWithApp
 
     def index
-      old_app = extract_app
+      old_app = app
       puts "Cloning #{old_app}"
 
       old_stack = heroku.info(old_app)[:stack]
